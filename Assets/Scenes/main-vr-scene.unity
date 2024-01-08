@@ -3254,7 +3254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: cbc0632a540e0284f9af379848b5a661, type: 3}
       propertyPath: m_Name
-      value: IceCream
+      value: IceCream-2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cbc0632a540e0284f9af379848b5a661, type: 3}
       propertyPath: m_LocalPosition.x

@@ -74,6 +74,7 @@ public class Moving : MonoBehaviour
         tempPosition = transform.position;
         var sth1 = gameObject.GetComponent<TextMeshPro>();
         sth1.text = Shared.wordsList[0].word;
+        Shared.currentWord = Shared.wordsList[0].id;
     }
 
 
@@ -97,7 +98,9 @@ public class Moving : MonoBehaviour
 
             if (sth1)
             {
-                sth1.text = Shared.wordsList[rnd.Next(0, Shared.wordsList.Count)].word;
+                var word = Shared.wordsList[rnd.Next(0, Shared.wordsList.Count)];
+                Shared.currentWord = word.id;
+                sth1.text = word.word;
             }
             shouldResetPosition = false;
         }

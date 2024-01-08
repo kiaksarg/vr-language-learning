@@ -8,7 +8,7 @@ public class WordObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,10 +19,11 @@ public class WordObject : MonoBehaviour
     // Update is called once per frame
 
 
-    public void initChildObject(string childName)
+    public void initChildObject(string childName, Vector3 pos)
     {
         // Assuming 'childObject' is the object you want to make a child
-        GameObject childObject = GameObject.Find(childName);
+        GameObject childObjectSample = GameObject.Find(childName);
+        GameObject childObject = Instantiate(childObjectSample);
 
         var collider1 = childObject.AddComponent<BoxCollider>();
         var collider2 = childObject.AddComponent<BoxCollider>();
@@ -43,13 +44,16 @@ public class WordObject : MonoBehaviour
             childObject.transform.SetParent(gameObject.transform);
 
             // Optional: You can reset the local position and rotation of the child
-            childObject.transform.localPosition = Vector3.zero;
+            childObject.transform.localPosition = pos;
             childObject.transform.localRotation = Quaternion.identity;
+
+            Shared.wordGameObjectList.Add(childObject);
         }
         else
         {
             Debug.LogError("Child object not found!");
         }
+
 
     }
 

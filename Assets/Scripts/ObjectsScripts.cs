@@ -11,7 +11,7 @@ public class ObjectsScripts : MonoBehaviour
     void Start()
     {
 
-       
+
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class ObjectsScripts : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-                Debug.Log("triggered:");
+        Debug.Log("triggered:");
 
 
         // if (other.name == "FrontText" && gameObject.transform.childCount > 0)
@@ -38,15 +38,22 @@ public class ObjectsScripts : MonoBehaviour
             if (other.GetComponent<TextMeshPro>())
             {
                 wordName = other.GetComponent<TextMeshPro>().text;
-                Debug.Log("triggered:" + wordName);
+                // Debug.Log("triggered:" + wordName);
 
                 // Debug.Log("wordName:" + wordName);
             }
 
-            var res = Shared.wordsList.Find((w) => w.id == gameObject.name.ToLower());
+            var res = Shared.wordsList.Find((w) => w.id.ToLower() == gameObject.name.Replace("(Clone)", "").Trim().ToLower());
             // var res = Shared.wordsList.Find((w) => w.id == gameObject.transform.GetChild(0).name.ToLower());
             // Debug.Log("res:" + res);
             // Debug.Log("res:" + res.word);
+
+            // Debug.Log(wordName);
+            // Debug.Log("gameObject.name:" + gameObject.name);
+            // Debug.Log("res:" + res);
+            // Debug.Log("res.word:" + res.word);
+            // Debug.Log("res.id:" + res.id);
+
 
             if (res.word == wordName)
             {
