@@ -59,10 +59,8 @@ public class WordObjectCreator : MonoBehaviour
 
     void createWordObjects()
     {
-        // // Find the GameObject with ScriptA attached
         GameObject WordObjectScriptObject = GameObject.Find("WordObject");
 
-        // Call the function from ScriptA
         if (WordObjectScriptObject != null)
         {
             WordObject WordObjectScript = WordObjectScriptObject.GetComponent<WordObject>();
@@ -81,11 +79,9 @@ public class WordObjectCreator : MonoBehaviour
 
                 foreach (var item in wordObjects.OrderBy(x => Guid.NewGuid()).Select((val, i) => (val, i)))
                 {
-                    // WordObjectScript.initChildObject(item, Vector3.zero);
                     WordObjectScript.initChildObject(item.val, GenerateVector(item.i));
                 }
 
-                // WordObjectScript.initChildObject("Milk");
             }
         }
     }
@@ -102,12 +98,6 @@ public class WordObjectCreator : MonoBehaviour
 
     Vector3 GenerateVector(int i)
     {
-        // float minX = -.3f;
-        // float maxX = .3f;
-        // float minZ = -.11f;
-        // float maxZ = .11f;
-        // float randomX = UnityEngine.Random.Range(minX, maxX);
-        // float randomZ = UnityEngine.Random.Range(minZ, maxZ);
-        return new Vector3(.35f * i, 0f, 0f);
+        return new Vector3(.39f * i, 0f, 0f);
     }
 }

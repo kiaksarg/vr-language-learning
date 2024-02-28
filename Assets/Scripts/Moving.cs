@@ -8,46 +8,6 @@ using UnityEngine.Events;
 
 public class Moving : MonoBehaviour
 {
-    // {
-    //     "Handla", "Shopping",
-    //     "Mat", "Food",
-    //     "Kök", "Kitchen",
-    //     "Kylskåp", "Refrigerator",
-    //     "Bestick", "Utensils",
-    //     "Tallrik", "Plate",
-    //     "Glas", "Glass",
-    //     "Kaffebryggare", "Coffee maker",
-    //     "Mjölk", "Milk",
-    //     "Bröd", "Bread",
-    //     "Frukt", "Fruit",
-    //     "Grönsaker", "Vegetables",
-    //     "Kryddor", "Spices",
-    //     "Kasse", "Bag",
-    //     "Pris", "Price",
-    //     "Vara", "Product",
-    //     "Kassa", "Checkout",
-    //     "Kundvagn", "Shopping cart"
-    // }
-    // public List<String> wordsList = new List<string>(){
-    //   "Handla",
-    // "Mat",
-    // "Kök",
-    // "Kylskåp",
-    // "Bestick",
-    // "Tallrik",
-    // "Glas",
-    // "Kaffebryggare",
-    // "Mjölk",
-    // "Bröd",
-    // "Frukt",
-    // "Grönsaker",
-    // "Kryddor",
-    // "Kasse",
-    // "Pris",
-    // "Vara",
-    // "Kassa",
-    // "Kundvagn"
-    // };
 
     public UnityEvent textResetEvent;
 

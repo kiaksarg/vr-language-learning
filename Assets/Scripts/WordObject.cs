@@ -25,25 +25,21 @@ public class WordObject : MonoBehaviour
         GameObject childObjectSample = GameObject.Find(childName);
         GameObject childObject = Instantiate(childObjectSample);
 
-        var collider1 = childObject.AddComponent<BoxCollider>();
+        childObject.AddComponent<BoxCollider>();
         var collider2 = childObject.AddComponent<BoxCollider>();
-        var rigidBody = childObject.AddComponent<Rigidbody>();
-        var xRGrabInteractable = childObject.AddComponent<XRGrabInteractable>();
-        var objectsScripts = childObject.AddComponent<ObjectsScripts>();
+        childObject.AddComponent<Rigidbody>();
+        childObject.AddComponent<XRGrabInteractable>();
+        childObject.AddComponent<ObjectsScripts>();
+        // var audioSource = childObject.AddComponent<AudioSource>();
 
 
         collider2.isTrigger = true;
         // rigidBody.isKinematic = true;
 
-
-
-        // Check if the child object and the empty object are not null
         if (childObject != null)
         {
-            // Set the empty object as the parent of the child object
             childObject.transform.SetParent(gameObject.transform);
 
-            // Optional: You can reset the local position and rotation of the child
             childObject.transform.localPosition = pos;
             childObject.transform.localRotation = Quaternion.identity;
 
